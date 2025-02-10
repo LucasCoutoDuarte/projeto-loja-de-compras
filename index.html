@@ -9,7 +9,7 @@
         
         <link rel="stylesheet" href="css/style.css">
 
-        <script scr = "js/funcoes.js"></script>
+        <script src = "js/funcoes.js"></script>
 
     </head>
 <body>
@@ -37,13 +37,13 @@
                     <div><span class="produto-item">Codigo:</span> 23454356</div>
                     <div><span class="produto-item">Cor:</span> Meia-Noite</div>
                 </td>
-                <td>4.299,00</td>
+                <td id="valor_1">R$ 4299.00</td>
                 <td>
-                    <span class="badge text-bg-danger"><i class="bi bi-dash-square"></i></span></h1>
-                    0
-                    <span class="badge text-bg-success" onclick="soma()"><i class="bi bi-plus-square"></i></span></h1>
+                    <span class="badge text-bg-danger"onclick="alterarQtd(1, '-')"><i class="bi bi-dash-square"></i></span></h1>
+                    <span id="qtd_1">0</span>
+                    <span class="badge text-bg-success" onclick="alterarQtd(1, '+')"><i class="bi bi-plus-square"></i></span></h1>
                 </td>
-                <td></td>
+                <td id="total_1">0</td>
             </tr>
             
                 <tr>
@@ -55,34 +55,37 @@
                         <div><span class="produto-item">Codigo:</span> 23454874</div>
                         <div><span class="produto-item">Cor:</span> Prateado</div>
                     </td>
-                    <td>22.749,00</td>
+                    <td id="valor_2">R$ 22749.00</td>
                     <td>
-                        <span class="badge text-bg-danger"><i class="bi bi-dash-square"></i></span></h1>
-                    0
-                    <span class="badge text-bg-success"><i class="bi bi-plus-square"></i></span></h1>
+                    <span class="badge text-bg-danger"onclick="alterarQtd(2, '-')"><i class="bi bi-dash-square"></i></span></h1>
+                        <span id="qtd_2">0</span>
+                    <span class="badge text-bg-success" onclick="alterarQtd(2, '+')"><i class="bi bi-plus-square"></i></span></h1>
                     </td>
-                    <td></td>
-                    <tr>
-                        <td>
-                            <img src="img/produto_3.jpg" alt="Produto 3" width="200">
-                        </td>
-                        <td>
-                            <div>Smart TV 50" UHD 4K 50CU7700 2023</div>
-                            <div><span class="produto-item">Codigo:</span> 23454563</div>
-                            <div><span class="produto-item">Cor:</span> Preto</div>
-                        </td>
-                        <td>3.599,00</td>
-                        <td>
-                        <span class="badge text-bg-danger"><i class="bi bi-dash-square"></i></span></h1>
-                    0
-                        <span class="badge text-bg-success"><i class="bi bi-plus-square"></i></span></h1>
-                        </td>
-                        <td></td>
+                    <td id="total_2">0</td>
+                </tr>
+                <tr>
+                    <td>
+                        <img src="img/produto_3.jpg" alt="Produto 3" width="200">
+                    </td>
+                    <td>
+                        <div>Smart TV 50" UHD 4K 50CU7700 2023</div>
+                        <div><span class="produto-item">Codigo:</span> 23454563</div>
+                        <div><span class="produto-item">Cor:</span> Preto</div>
+                    </td>
+                    <td id="valor_3">R$ 3599.00</td>
+                    <td>
+                    <span class="badge text-bg-danger"onclick="alterarQtd(3, '-')"><i class="bi bi-dash-square"></i></span></h1>
+                        <span id="qtd_3">0</span>
+                    <span class="badge text-bg-success" onclick="alterarQtd(3, '+')"><i class="bi bi-plus-square"></i></span></h1>
+                    </td>
+                    <td id="total_3">0</td>
+                </tr>
+                        
         </tbody>
     </table>
 
     <footer class="text-center">
-        <span><i class="bi bi-cart-check"></i>Subtotal: R$ 0</span>
+        <span><i class="bi bi-cart-check"></i>Subtotal: <span id="subtotal">R$ 0</span></span>
     </footer>
     </div>
 </body>
